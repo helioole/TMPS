@@ -2,6 +2,7 @@ package ShoppingCart;
 
 import Categories.IProduct;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -27,4 +28,5 @@ public class Order implements IOrder {
     public Date getOrderDate() {
         return orderDate;
     }
+
 }

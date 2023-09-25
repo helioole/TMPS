@@ -11,4 +11,5 @@ public interface IOrder {
     double getTotal();
 
     Date getOrderDate();
+
 }

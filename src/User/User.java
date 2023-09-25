@@ -9,13 +9,13 @@ public class User implements IUser {
     private String username;
     private String name;
     private String email;
-    private List<IOrder> orderHistory;
+    private List<IOrder>userHistory;
 
     public User(String username, String name, String email) {
         this.username = username;
         this.name = name;
         this.email = email;
-        this.orderHistory = new ArrayList<>();
+        this.userHistory = new ArrayList<>();
     }
 
     public String getUsername() {
@@ -30,11 +30,11 @@ public class User implements IUser {
         return email;
     }
 
-    public List<IOrder> getOrderHistory() {
-        return orderHistory;
+    public List<IOrder> getUserHistory() {
+        return userHistory;
     }
 
-    public void addOrderToHistory(IOrder order) {
-        orderHistory.add(order);
+    public void addUserToHistory(IOrder order) {
+        userHistory.add(order);
     }
 }

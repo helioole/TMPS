@@ -92,8 +92,8 @@ public class Main {
 
         User retrievedUser = (User) ecommerceSystem.getUser("user1");
 
-        if (retrievedUser != null && !retrievedUser.getOrderHistory().isEmpty()) {
-            IOrder latestOrder = retrievedUser.getOrderHistory().get(retrievedUser.getOrderHistory().size() - 1);
+        if (retrievedUser != null && !retrievedUser.getUserHistory().isEmpty()) {
+            IOrder latestOrder = retrievedUser.getUserHistory().get(retrievedUser.getUserHistory().size() - 1);
             OrderPrinter.printOrderAndUserDetails(latestOrder, retrievedUser);
 
         } else {

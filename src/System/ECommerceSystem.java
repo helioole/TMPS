@@ -53,7 +53,7 @@ public class ECommerceSystem {
             product.decreaseStock(quantity);
         }
 
-        user.addOrderToHistory(order);
+        user.addUserToHistory(order);
         cart.getItems().clear();
     }
 }
