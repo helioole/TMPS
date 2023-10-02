@@ -2,12 +2,11 @@ package System;
 
 import java.util.*;
 import Categories.*;
-import ShoppingCart.IOrder;
-import ShoppingCart.IShoppingCart;
-import ShoppingCart.Order;
+import ShoppingCart.*;
 import User.IUser;
 
 public class ECommerceSystem {
+    private static ECommerceSystem instance;
     private Map<String, IUser> users;
     private Map<String, List<IProduct>> productCategories;
     private List<IOrder> orders;
@@ -18,12 +17,15 @@ public class ECommerceSystem {
         this.orders = new ArrayList<>();
     }
 
-    public void addUser(IUser user) {
-        users.put(user.getUsername(), user);
+    public static ECommerceSystem getInstance() {
+        if (instance == null) {
+            instance = new ECommerceSystem();
+        }
+        return instance;
     }
 
-    public IUser getUser(String username) {
-        return users.get(username);
+    public void addUser(IUser user) {
+        users.put(user.getUsername(), user);
     }
 
     public void addProduct(String category, IProduct product) {
@@ -41,7 +43,7 @@ public class ECommerceSystem {
         return productCategories.getOrDefault(category, Collections.emptyList());
     }
 
-    public void placeOrder(IUser user, IShoppingCart cart) {
+    public void placeOrder(IHistory history, IShoppingCart cart) {
         double total = cart.calculateTotal();
         List<IProduct> orderedProducts = new ArrayList<>(cart.getItems().keySet());
 
@@ -53,7 +55,7 @@ public class ECommerceSystem {
             product.decreaseStock(quantity);
         }
 
-        user.addUserToHistory(order);
+        history.addUserToHistory(order);
         cart.getItems().clear();
     }
 }

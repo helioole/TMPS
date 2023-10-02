@@ -21,7 +21,7 @@ public class OrderPrinter {
         System.out.println("Products:");
 
         for (IProduct product : order.getProducts()) {
-            System.out.println(product.getName());
+            System.out.println(product.getName() + "(s)");
         }
         System.out.println("Thank you for shopping with us!");
     }

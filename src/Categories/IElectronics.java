@@ -1,5 +1,7 @@
 package Categories;
 
-public interface IElectronics {
+public interface IElectronics extends IProduct{
     String getBrand();
+    String getModel();
+    int getWarrantyInYears();
 }

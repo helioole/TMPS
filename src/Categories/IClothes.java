@@ -1,4 +1,6 @@
 package Categories;
-public interface IClothes {
+public interface IClothes extends IProduct{
+
     String getSize();
+    String getFabric();
 }

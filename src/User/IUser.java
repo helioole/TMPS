@@ -11,7 +11,4 @@ public interface IUser {
 
     String getEmail();
 
-    List<IOrder> getUserHistory();
-
-    void addUserToHistory(IOrder order);
 }
