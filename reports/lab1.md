@@ -54,22 +54,22 @@ public class OrderPrinter {
     public static void printOrderAndUserDetails(IOrder order, IUser user) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-        System.out.println("----------------------------");
-        System.out.println("User Information:");
-        System.out.println("UserName: " + user.getName());
-        System.out.println("Username: " + user.getUsername());
-        System.out.println("Email: " + user.getEmail());
-        System.out.println("----------------------------");
+        lab2_old.Builders.System.out.println("----------------------------");
+        lab2_old.Builders.System.out.println("lab2_old.Builders.User Information:");
+        lab2_old.Builders.System.out.println("UserName: " + user.getName());
+        lab2_old.Builders.System.out.println("Username: " + user.getUsername());
+        lab2_old.Builders.System.out.println("Email: " + user.getEmail());
+        lab2_old.Builders.System.out.println("----------------------------");
 
-        System.out.println("Order Details:");
-        System.out.println("Order Date: " + dateFormat.format(order.getOrderDate()));
-        System.out.println("Total Price: $" + order.getTotal());
-        System.out.println("Products:");
+        lab2_old.Builders.System.out.println("Order Details:");
+        lab2_old.Builders.System.out.println("Order Date: " + dateFormat.format(order.getOrderDate()));
+        lab2_old.Builders.System.out.println("Total Price: $" + order.getTotal());
+        lab2_old.Builders.System.out.println("Products:");
 
         for (IProduct product : order.getProducts()) {
-            System.out.println(product.getName());
+            lab2_old.Builders.System.out.println(product.getName());
         }
-        System.out.println("Thank you for shopping with us!");
+        lab2_old.Builders.System.out.println("Thank you for shopping with us!");
     }
 }
 ```
@@ -173,10 +173,10 @@ A client should never be forced to implement an interface that it doesn’t use,
 Classes in this project implement only interfaces that describe their behavior:
 
 ```java
-public class ShoppingCart implements IShoppingCart {
+public class lab2_old.Builders.ShoppingCart implements IShoppingCart {
     private Map<IProduct, Integer> items;
 
-    public ShoppingCart() {
+    public lab2_old.Builders.ShoppingCart() {
       ...
     }
 
