@@ -1,6 +1,7 @@
 package lab2_new.builder;
 
 import lab2_new.client.Coffee;
+
 import lab2_new.enum_class.CoffeeType;
 import lab2_new.factory.CoffeeFactory;
 
@@ -24,8 +25,6 @@ public class CustomCoffeeBuilder {
     }
 
     public Coffee build() {
-        Coffee coffee = CoffeeFactory.createCoffee(type);
-        coffee.prepare();
-        return coffee;
+        return new Coffee();
     }
 }

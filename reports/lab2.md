@@ -140,9 +140,7 @@ public class CustomCoffeeBuilder {
     }
 
     public Coffee build() {
-        Coffee coffee = CoffeeFactory.createCoffee(type);
-        coffee.prepare();
-        return coffee;
+        return new Coffee();
     }
 }
 ```
