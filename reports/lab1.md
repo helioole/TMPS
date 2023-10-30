@@ -55,7 +55,7 @@ public class OrderPrinter {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         lab2_old.Builders.System.out.println("----------------------------");
-        lab2_old.Builders.System.out.println("lab2_old.Builders.User Information:");
+        lab2_old.Builders.System.out.println("lab2_old.Builders.lab4.memento.User Information:");
         lab2_old.Builders.System.out.println("UserName: " + user.getName());
         lab2_old.Builders.System.out.println("Username: " + user.getUsername());
         lab2_old.Builders.System.out.println("Email: " + user.getEmail());
